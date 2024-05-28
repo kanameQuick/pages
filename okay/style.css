@@ -1,0 +1,40 @@
+* {
+    user-select: none; /* Standard */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Safari/Chrome/Edge */
+    -ms-user-select: none; /* Internet Explorer 10+ */
+    -o-user-select: none; /* Opera */
+}
+
+
+body {
+    margin: 0%;
+    overflow: hidden;
+}
+
+.trianglesContainer {
+    width: 100vw;
+    height: 100vh;
+    padding: 0%;
+    overflow: clip;
+    background: rgb(250,250,250);
+    background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 30%, rgba(193,240,242,1) 100%);
+}
+
+.triangle {
+    --triangleAxisX: .5;
+    --triangleAxisY: .5;
+    --triangleAxisZ: .5;
+    --triangleRotation: 45deg;
+    --triangleDuration: 0.001s;
+
+    position: absolute;
+    visibility: hidden;
+    width: 64px;
+    height: 64px;
+    left: 100%;
+    top: 100%;
+    transition-timing-function: linear;
+    transition-duration: var(--triangleDuration);
+    transform: rotate3d(var(--triangleAxisX), var(--triangleAxisY), var(--triangleAxisZ), var(--triangleRotation));
+}
