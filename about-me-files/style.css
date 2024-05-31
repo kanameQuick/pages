@@ -168,11 +168,12 @@ a:hover {
     margin-right: 4px;
     width: 24px;
     height: 24px;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+}
+
+.iconImageContainer > img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .message-box {
